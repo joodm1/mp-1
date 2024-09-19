@@ -1,0 +1,450 @@
+* {
+  box-sizing: border-box;
+  font-family: "Nanum Myeongjo", serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+
+
+h1{
+  font-size: calc(10px + 3vw);
+}
+
+
+.banner {
+  background-color: teal;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 60%; /* Set a fixed height */
+  position: relative;
+  top: 0;
+  z-index: 1; /* Ensures it stays above other elements like the sidebar */
+}
+
+
+.banner-content {
+  padding: 16px;
+  text-align: center;
+  color:white;
+  font-size: calc(5px + 1vw);
+}
+
+
+body {
+  background-color: #f3f5f9;
+}
+
+
+.wrappar {
+  display: flex;
+  position: relative;
+  margin-bottom:5%;
+
+}
+
+
+.wrappar .sidebar {
+  position: fixed;
+  width: 15%;
+  height: 100%;
+  background-color: #4b4276;
+  padding-top: 10%;
+  top:0;
+
+
+}
+
+/* Sidebar Heading */
+.wrappar .sidebar h1 {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Sidebar Links */
+.wrappar .sidebar ul li {
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(225, 225, 225, 0.03);
+}
+
+.wrappar .sidebar ul li a {
+  color: #bdb8d7;
+  display: block;
+}
+
+/* Main Content */
+main {
+  height: 100%;
+}
+
+
+.slay {
+  display: flex; /* Aligns the image and text side by side */
+  gap: 20px; /* Adds space between the image and the text */
+  align-items: flex-start; /* Aligns the top of the image and text */
+  width: 100%; /* Ensures the container takes the full width of its parent */
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+.slay img {
+  max-width: 40%; /* Set the max width for the image */
+  height: auto; /* Ensure the image retains its aspect ratio */
+  margin: 0 5%;
+
+}
+
+
+.intro-text {
+  width: 90%;
+
+  line-height: 2;
+}
+
+
+
+.hobby h1{
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+}
+.hobby h3 {
+  display: block;
+  flex-direction: row;
+
+
+
+}
+
+
+.ed h1{
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+
+
+}
+
+
+
+
+
+.ed p{
+  margin:6%;
+}
+
+.ed p{
+  text-align: center;
+  margin-left:  17%;
+
+}
+.ed .eacher {
+  display: block;
+  margin : 5% 10% 0% 18%;
+  box-sizing: border-box;
+
+
+
+
+}
+
+.ed .eacher h4 {
+  color:teal;
+  font-size:calc(5px + 1vw);
+  margin-left: 4vh;
+
+
+
+}
+
+.ed .eacher h3 {
+
+  color:#4b4276;
+
+}
+.ed .eacher p {
+
+  margin-left:5vh
+}
+
+
+
+.eacher{
+  display: inline-block;
+  margin-bottom: 5%;
+  box-sizing: border-box;
+  margin-left: 18%;
+  margin-top: 5%;
+
+}
+
+
+.eacher img {
+  float: left;  /* Float the image to the left */
+  margin-right: 15px;  /* Add some margin to the right of the image */
+  margin-bottom: 10px; /* Add some margin to the bottom for spacing */
+  max-width: 30%; /* Set a maximum width for the image */
+
+}
+
+.eacher h3 {
+  color: teal;
+  text-align: left;
+  margin-bottom:5vh;
+  font-size: calc(10px + 2vw);
+
+
+
+}
+
+.eacher p {
+  line-height: 1.7;
+  font-size: calc(5px + 1vw);
+  margin: 0;
+}
+
+footer{
+
+  margin:5% 0% 1% 16%;
+  bottom:0;
+  position: fixed;
+
+}
+
+
+
+
+#proj{
+  display:flex;
+
+
+  flex-direction:column;
+
+  margin-left:45% ;
+}
+
+#proj h1{
+ margin-bottom:30%;
+
+
+}
+
+#proj .box{
+  margin-right:30%;
+}
+
+
+
+@media screen and (max-width: 750px) {
+
+  .wrappar {
+    flex-direction: column; /*almost died trying to figure this one out </3  */
+  }
+
+
+  .wrappar .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #4b4276;
+  }
+
+
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around; /* Space links across the top */
+    width: 100%;
+  }
+
+  .sidebar ul li {
+    padding: 10px;
+    border: none; /* Remove borders to look like a top bar */
+  }
+
+  .slay {
+    margin-left: 0; /* Adjust margin to match new layout */
+    margin-top: 20px; /* Adjust margin for spacing */
+  }
+
+  .slay img{
+    width: 100vw;
+  }
+
+
+
+
+  .wrappar .eacher{
+
+    margin-top: 15%;
+  }
+  .eacher, .ed .eacher{
+    margin: 10% auto;
+    align-content: center;
+    margin: auto 8%;
+
+  }
+  .eacher h3, .ed .eacher h4{
+
+
+    text-align: center;
+    font-size: calc(10px + 3vw);
+    margin-bottom: 5%;
+  }
+
+
+  .eacher img {
+    width: 100%; /* Ensure images take full width of their container */
+    max-width: 100%; /* Prevent any overflow issues */
+    float: none; /* Disable float on small screens */
+    margin: 0; /* Remove any margins that might limit the width */
+    margin-bottom:3%;
+  }
+
+  .eacher p {
+
+    font-size: calc(5px + 2vw);
+    align-content:center;
+
+
+
+  }
+
+  .eacher h3{
+    margin-top: 15%;
+
+  }
+
+
+
+  .ed .eacher h3{
+
+    margin-top: 15%;
+  }
+  .ed p , .ed .eacher p{
+
+    margin: 0px 3vh;
+    font-size: calc(10px + 2vw);
+    align-content:center;
+
+  }
+
+
+
+
+
+  footer {
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    width: 100%;
+    background-color: #4b4276;
+    color: white;
+    bottom:0;
+    position: relative;
+  }
+
+  #proj-footer {
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    width: 100%;
+    background-color: #4b4276;
+    color: white;
+    bottom:0;
+    position: fixed;
+  }
+
+
+  footer a {
+    color: white;
+    text-decoration: none;
+
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+
+
+
+  }
+
+  #proj{
+
+    align-text:center;
+  }
+
+
+
+  body{
+
+  }
+
+  .buttons{
+    text-align: center;
+    margin-top: 40vh;
+
+
+  }
+
+  button{
+
+    border: 1px solid purple;
+    background:none;
+    padding:10px 20px;
+    cursor:pointer;
+    margin:10px;
+
+  }
+
+  #power, #add{
+
+
+    color:purple;
+
+  }
+
+
+  #clear, #sub{
+
+
+    color:black;
+
+  }
+
+
+  #power:hover, #add:hover{
+    color:black
+
+
+
+  }
+
+
+
+  #clear:hover, #sub:hover{
+    color:purple;
+
+
+  }
+
+
+  button::before{
+
+
+
+    content:'';
+
+    position:absolute;
+    left:0;
+  }
+
+}
