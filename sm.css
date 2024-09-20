@@ -1,3 +1,6 @@
+
+
+
 * {
   box-sizing: border-box;
   font-family: "Nanum Myeongjo", serif;
@@ -213,7 +216,7 @@ footer{
 
   margin:5% 0% 1% 16%;
   bottom:0;
-  position: fixed;
+  position: relative;
 
 }
 
@@ -230,13 +233,17 @@ footer{
 }
 
 #proj h1{
- margin-bottom:30%;
+  margin-bottom:20%;
 
 
 }
 
 #proj .box{
   margin-right:30%;
+}
+
+.spacer{
+  margin-bottom:5%;
 }
 
 
@@ -325,6 +332,7 @@ footer{
 
 
 
+
   .ed .eacher h3{
 
     margin-top: 15%;
@@ -379,7 +387,14 @@ footer{
 
   #proj{
 
-    align-text:center;
+    align-content:center;
+    margin-left:40%;
+  }
+  #proj h1{
+    margin-bottom:10%;
+
+
+
   }
 
 
@@ -390,7 +405,11 @@ footer{
 
   .buttons{
     text-align: center;
-    margin-top: 40vh;
+    margin-top: 10vh;
+    margin-right: 40%;
+    margin-bottom: 15%;
+    display: flex;
+    flex-direction: column;
 
 
   }
@@ -401,7 +420,7 @@ footer{
     background:none;
     padding:10px 20px;
     cursor:pointer;
-    margin:10px;
+    margin:2%;
 
   }
 

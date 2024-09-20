@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Calculator | resume | Jood Alasiri<</title>
+  <!-- Link to external CSS -->
   <link rel="stylesheet" type="text/css" href="sm.css">
+
+  <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Link to Google Fonts for 'Nanum Myeongjo' -->
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
 
+  <!-- Link to external JavaScript file -->
   <script src="qs.js"></script>
 </head>
 <body>
@@ -15,7 +21,7 @@
 </body>
 <main>
 
-  <!-- change to something else?-->
+  <!-- Banner section with a header -->
   <div class="banner">
     <div class="banner-content">
       <h1>Jood Alasiri</h1>
@@ -24,56 +30,47 @@
   </div>
 
   <div class="wrappar">
+    <!-- Sidebar navigation -->
     <nav class="sidebar">
-
       <br>
-
-
       <ul>
-        <li><a href="index.html">Home</a></li><!-- done-->
-        <li><a href="hobby.html">Hobbies and artwork</a></li><!-- done-->
-        <li><a href="ed.html">Education</a></li><!-- done-->
-        <li><a href="exp.html">Experiences</a></li><!-- replace with something-->
-        <li><a href="proj.html">Projects</a></li><!-- done-->
-        <li><a href="lang.html">Languages</a></li><!-- done-->
+        <li><a href="index.html">Home</a></li><!-- done -->
+        <li><a href="hobby.html">Hobbies and artwork</a></li><!-- done -->
+        <li><a href="ed.html">Education</a></li><!-- done -->
+        <li><a href="exp.html">Experiences</a></li><!-- replace with something -->
+        <li><a href="proj.html">Projects</a></li><!-- done -->
+        <li><a href="lang.html">Languages</a></li><!-- done -->
       </ul>
     </nav>
 
-<div id="proj">
-      <h1 >Project</h1>
-    <div class="box">
+    <!-- Project section with inputs and buttons for operations -->
+    <div id="proj">
+      <h1>Project</h1>
+      <div class="box">
+        <label for="first">give me a number:</label><input id="first">
+        <br><br>
+        <label for="second">give me another number</label><input id="second">
+        <br><br>
 
-      <label for="first">give me a number:</label><input id="first">
-      <br><br>
-      <label for="second">give me another number</label><input id="second">
-      <br><br>
+        <!-- Buttons to trigger different JavaScript functions -->
+        <div class="buttons">
+          <button id="power" onclick="mypow()">**</button>
+          <button id="add" onclick="add()">+</button>
+          <button id="sub" onclick="sub()">-</button>
+          <button id="mult" onclick="mult()">*</button>
+          <button id="clear" onclick="clr()">clear</button>
+        </div>
 
-      <div class="buttons">
-        <button id="power" onclick="mypow()">**</button>
-        <button id="add" onclick="add()">+</button>
-        <button id="sub" onclick="sub()">-</button>
-        <button id="mult" onclick="mult()">*</button>
-        <button id="clear" onclick="clr()">clear</button>
+        <!-- Div to display output -->
+        <div id="output"></div>
       </div>
-
-
-
-      <div id="output"></div>
     </div>
-
-</div>
   </div>
 
-<footer id="proj-footer"><p>All rights reserved by Jood Alasiri <a href="">Credits</a> &#169;</p> </footer>
-
-
-
-
-
-
-
-
+  <!-- Footer section -->
+  <footer id="proj-footer">
+    <p>All rights reserved by Jood Alasiri <a href="">Credits</a> &#169;</p>
+  </footer>
 
 </main>
-
 </html>
