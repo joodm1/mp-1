@@ -2,86 +2,76 @@
 
 
 * {
-  box-sizing: border-box;
-  font-family: "Nanum Myeongjo", serif;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
+  box-sizing: border-box; /* Ensures that padding and borders are included in the element's total width and height, preventing unexpected layout issues and making spacing more predictable. */
+  font-family: "Nanum Myeongjo", serif; /* Sets the font for the entire document to "Nanum Myeongjo," a serif typeface. This gives the text a formal, elegant appearance. */
+  margin: 0; /* Removes default margin for all elements to prevent unwanted spacing. */
+  padding: 0; /* Removes default padding for all elements. */
+  list-style: none; /* Removes the default list item markers (e.g., bullets or numbers) for any lists. */
+  text-decoration: none; /* Removes default text decoration like underlines for all text elements, particularly anchor links. */
 }
 
-
-
-h1{
-  font-size: calc(10px + 3vw);
+h1 {
+  font-size: calc(10px + 3vw); /* Makes the font size of all `h1` elements responsive, scaling based on the viewport width. This keeps the `h1` headings readable and appropriately sized on different screen sizes. */
 }
-
 
 .banner {
-  background-color: teal;
-  max-width: 100%;
-  margin: 0 auto;
-  height: 60%; /* Set a fixed height */
-  position: relative;
-  top: 0;
-  z-index: 1; /* Ensures it stays above other elements like the sidebar */
+  background-color: teal; /* Sets the banner's background color to teal. */
+  max-width: 100%; /* Ensures the banner does not exceed the full width of the viewport. */
+  margin: 0 auto; /* Centers the banner horizontally within its container. */
+  height: 60%; /* Sets the height of the banner to 60% of its container. This might result in a large banner depending on the container's height. */
+  position: relative; /* Positions the banner relative to its normal position, allowing it to be moved using `top`, `bottom`, `left`, and `right` properties. */
+  top: 0; /* Positions the banner at the top of its containing element. */
+  z-index: 1; /* Ensures the banner is above other elements, particularly those with a lower `z-index`, such as the sidebar. */
 }
-
 
 .banner-content {
-  padding: 16px;
-  text-align: center;
-  color:white;
-  font-size: calc(5px + 1vw);
+  padding: 16px; /* Adds 16px of padding inside the banner content, ensuring space between the content and the edges of the banner. */
+  text-align: center; /* Centers the text inside the banner. */
+  color: white; /* Sets the text color to white for good contrast against the teal background. */
+  font-size: calc(5px + 1vw); /* Makes the font size responsive, scaling with the viewport width. This ensures readability on different screen sizes. */
 }
-
 
 body {
-  background-color: #f3f5f9;
+  background-color: #f3f5f9; /* Sets the background color of the page to a light grayish-blue (#f3f5f9), giving the page a clean and soft look. */
 }
-
 
 .wrappar {
-  display: flex;
-  position: relative;
-  margin-bottom:5%;
-
+  display: flex; /* Uses flexbox to lay out the child elements inside the `.wrappar` container, making it easier to align the sidebar and main content. */
+  position: relative; /* Positions the `.wrappar` relative to its normal position, which could be helpful for positioning its children. */
+  margin-bottom: 5%; /* Adds space at the bottom of the `.wrappar` container, creating separation from elements below it. */
 }
 
-
 .wrappar .sidebar {
-  position: fixed;
-  width: 15%;
-  height: 100%;
-  background-color: #4b4276;
-  padding-top: 10%;
-  top:0;
-
-
+  position: fixed; /* Fixes the sidebar to a specific position within the viewport, ensuring it stays in place while scrolling. */
+  width: 15%; /* Sets the sidebar width to 15% of the viewport or parent container. */
+  height: 100%; /* Ensures the sidebar spans the full height of the viewport. */
+  background-color: #4b4276; /* Sets the sidebar background color to a dark purple (#4b4276). */
+  padding-top: 10%; /* Adds padding at the top of the sidebar, creating space between the top of the viewport and the sidebar content. */
+  top: 0; /* Fixes the sidebar to the top of the viewport. */
 }
 
 /* Sidebar Heading */
 .wrappar .sidebar h1 {
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
+  color: #fff; /* Sets the text color of the sidebar heading to white for contrast against the dark background. */
+  text-transform: uppercase; /* Converts the sidebar heading text to uppercase, giving it a bold, prominent appearance. */
+  text-align: center; /* Centers the text horizontally within the sidebar. */
 }
 
 /* Sidebar Links */
 .wrappar .sidebar ul li {
-  padding: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-  border-top: 1px solid rgba(225, 225, 225, 0.03);
+  padding: 15px; /* Adds padding around each list item, creating space between the text and the borders. */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03); /* Adds a very subtle bottom border with low opacity, creating a gentle separation between list items. */
+  border-top: 1px solid rgba(225, 225, 225, 0.03); /* Adds a similarly subtle top border to further define the space between items. */
 }
 
 .wrappar .sidebar ul li a {
-  color: #bdb8d7;
-  display: block;
+  color: #bdb8d7; /* Sets the link color to a light lavender shade, providing enough contrast while blending with the sidebar’s color scheme. */
+  display: block; /* Makes the link take up the full width of the list item, ensuring that the entire list item is clickable, not just the text. */
 }
 
 /* Main Content */
 main {
-  height: 100%;
+  height: 100%; /* Ensures the main content area takes up the full height of its container, making sure it fills the space next to the sidebar. */
 }
 
 
@@ -101,149 +91,118 @@ main {
 
 }
 
-
 .intro-text {
-  width: 90%;
-
-  line-height: 2;
+  width: 90%; /* The text takes up 90% of its container's width, giving it some padding on either side for a clean, spacious layout. */
+  line-height: 2; /* Sets a line height of 2, making the lines of text more spaced out and easier to read. */
 }
 
-
-
-.hobby h1{
-  text-align: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
-
+.hobby h1 {
+  text-align: center; /* Centers the `h1` element text horizontally within its container. */
+  margin-top: 5%; /* Adds a 5% top margin, creating vertical spacing from the element above. */
+  margin-bottom: 5%; /* Adds a 5% bottom margin, separating it from content below. */
 }
+
 .hobby h3 {
-  display: block;
-  flex-direction: row;
+  display: block; /* Forces the `h3` element to behave as a block-level element, taking up the full width of its container. */
+  flex-direction: row; /* This property is normally used in a flexbox container. Since `h3` is a block-level element (and flexbox isn't applied here), `flex-direction: row;` has no effect. */
+}
 
+.ed h1 {
+  text-align: center; /* Centers the `h1` element within the `.ed` class. */
+  margin-top: 5%; /* Adds vertical space between the `h1` and any content above. */
+  margin-left: 5%; /* Adds a left margin of 5%, which may cause some offset if the text is intended to be centered. Consider using `margin: auto;` for more consistent centering. */
+  margin-bottom: 5%; /* Adds spacing below the `h1`, separating it from content beneath it. */
+}
 
-
+.ed p {
+  margin: 6%; /* Adds equal margins (6%) on all sides of the paragraph, creating balanced spacing within the `.ed` container. */
 }
 
 
-.ed h1{
-  text-align: center;
-  margin-top: 5%;
-  margin-left: 5%;
-  margin-bottom: 5%;
-
-
+.ed p {
+  text-align: center; /* Centers the text within the paragraph elements inside the `.ed` container. */
+  margin-left: 17%; /* Adds a left margin to move the paragraph content further to the right by 17%, which may lead to misalignment depending on the layout. */
 }
 
-
-
-
-
-.ed p{
-  margin:6%;
-}
-
-.ed p{
-  text-align: center;
-  margin-left:  17%;
-
-}
 .ed .eacher {
-  display: block;
-  margin : 5% 10% 0% 18%;
-  box-sizing: border-box;
-
-
-
-
+  display: block; /* The `.eacher` elements within the `.ed` container behave as block-level elements, taking up the full width of their container. */
+  margin: 5% 4% 0% 18%; /* Adds a top margin of 5%, right margin of 4%, no bottom margin, and a left margin of 18%, which may cause significant indentation from the left. */
+  box-sizing: border-box; /* Ensures that padding and borders are included in the element's total width and height. This prevents the element from unexpectedly expanding beyond its designated size. */
 }
 
 .ed .eacher h4 {
-  color:teal;
-  font-size:calc(5px + 1vw);
-  margin-left: 4vh;
-
-
-
+  color: teal; /* Sets the text color of `h4` elements to teal. */
+  font-size: calc(5px + 1vw); /* Sets the font size to be responsive, with a base size of 5px plus a scaling factor based on viewport width. */
+  margin-left: 4vh; /* Adds a left margin of 4vh (viewport height), shifting the `h4` element to the right, which could lead to an offset layout depending on the overall structure. */
 }
 
 .ed .eacher h3 {
-
-  color:#4b4276;
-
+  color: #4b4276; /* Changes the color of `h3` elements to a dark purple (#4b4276), creating a clear distinction from the `h4` text. */
 }
+
 .ed .eacher p {
-
-  margin-left:5vh
+  margin-left: 5vh; /* Adds a left margin of 5vh (viewport height) to the paragraph elements inside `.eacher`, which could shift the content significantly to the right depending on the height of the viewport. */
 }
 
 
 
-.eacher{
-  display: inline-block;
-  margin-bottom: 5%;
-  box-sizing: border-box;
-  margin-left: 18%;
+.eacher {
+  display: inline-block; /* Allows the `.eacher` element to maintain its block-like properties while still flowing inline, enabling content to wrap around it. */
+  margin-bottom: 5%; /* Adds space below each `.eacher` element, relative to the height of its container. */
+  box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height, preventing layout issues. */
+  margin-left: 18%; /* Adds a left margin to move the `.eacher` element 18% away from the left side of the container. */
+  margin-top: 5%; /* Adds space above the `.eacher` element, creating vertical separation. */
+  margin-right: 5%; /* Adds space to the right of the `.eacher` element, allowing for some spacing between elements if they're aligned horizontally. */
+}
+
+.eacher img {
+  float: left; /* Floats the image to the left, allowing text or other elements to wrap around it. */
+  margin-right: 3%; /* Adds space to the right of the image, separating it from adjacent content. */
+  margin-bottom: 4%; /* Adds space below the image, separating it from content below. */
+  max-width: 30%; /* Limits the image's width to 30% of its container, ensuring it doesn't take up too much space. */
+}
+
+.eacher h3 {
+  color: teal; /* Sets the text color of the `h3` element to teal, making it stand out. */
+  text-align: left; /* Aligns the heading text to the left. */
+  margin-bottom: 5vh; /* Adds a vertical margin below the heading, with a responsive value based on the viewport height. */
+  font-size: calc(10px + 2vw); /* Makes the font size responsive, adjusting based on the viewport width to ensure readability on different devices. */
+}
+
+.eacher p {
+  line-height: 1.7; /* Increases the line height to 1.7, improving the readability of the paragraph by adding more vertical space between lines. */
+  font-size: calc(5px + 1vw); /* Sets the font size to scale responsively based on the viewport width, with a base size of 5px plus an additional factor dependent on the width. */
+  margin: 0; /* Removes the default margin around paragraphs, giving more control over spacing. */
+}
+
+footer {
+  margin: 5% 0% 1% 16%; /* Adds vertical margin above and below the footer, as well as a left margin of 16% to align the footer towards the center-right of the page. */
+  bottom: 0; /* Positions the footer at the bottom of its container. */
+  position: relative; /* Keeps the footer positioned relative to its normal position in the document flow. */
+}
+
+
+
+
+
+#proj {
+  display: flex; /* Enables flexbox layout for the content inside the `#proj` element. */
+  flex-direction: column; /* Arranges the child elements inside `#proj` in a vertical column. */
+  margin-left: 45%; /* Shifts the entire `#proj` element 45% to the right, which may cause it to be aligned towards the right side of the page rather than centered. This could cause layout issues depending on the screen size. */
   margin-top: 5%;
 
 }
 
-
-.eacher img {
-  float: left;
-  margin-right: 3%;
-  margin-bottom: 4%;
-  max-width: 30%;
-
+#proj h1 {
+  margin-bottom: 20%; /* Adds a large bottom margin (20% of the container's height) below the `h1` element, which could create significant spacing depending on the layout. */
 }
 
-.eacher h3 {
-  color: teal;
-  text-align: left;
-  margin-bottom:5vh;
-  font-size: calc(10px + 2vw);
-
-
-
+#proj .box {
+  margin-right: 30%; /* Shifts the `.box` element 30% to the left, reducing its width and creating some spacing to the right. This may create a layout imbalance depending on the parent container's size. */
 }
 
-.eacher p {
-  line-height: 1.7;
-  font-size: calc(5px + 1vw);
-  margin: 0;
-}
-
-footer{
-
-  margin:5% 0% 1% 16%;
-  bottom:0;
-  position: relative;
-
-}
-
-
-
-
-#proj{
-  display:flex;
-
-
-  flex-direction:column;
-
-  margin-left:45% ;
-}
-
-#proj h1{
-  margin-bottom:20%;
-
-
-}
-
-#proj .box{
-  margin-right:30%;
-}
-
-.spacer{
-  margin-bottom:5%;
+.spacer {
+  margin-bottom: 5%; /* Adds vertical spacing (5% of the container's height) below elements with the `.spacer` class, allowing for some separation between elements. */
 }
 
 
@@ -254,51 +213,48 @@ footer{
     flex-direction: column; /*almost died trying to figure this one out </3  */
   }
 
-
   .wrappar .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    background-color: #4b4276;
+    width: 100%; /* The sidebar takes up the full width of its parent container. */
+    height: auto; /* The height adjusts automatically based on the content inside. */
+    position: relative; /* This allows for positioning of child elements relative to the sidebar's position in the document flow. */
+    display: flex; /* Flexbox layout is applied to the sidebar to arrange its child elements. */
+    justify-content: space-around; /* Distributes the child elements (likely list items) evenly with space around them. */
+    padding: 1% 0; /* Adds vertical padding of 1% based on the height of the sidebar. */
+    background-color: #4b4276; /* Sets a dark purple background color for the sidebar. */
   }
 
-
   .sidebar ul {
-    display: flex;
-    justify-content: space-around; /* Space links across the top */
-    width: 100%;
+    display: flex; /* Flexbox layout for the list inside the sidebar. */
+    justify-content: space-around; /* Distributes the list items evenly across the width of the sidebar. This creates equal spacing between the items. */
+    width: 100%; /* The list takes up the full width of the sidebar. */
   }
 
   .sidebar ul li {
-    padding: 10px;
-    border: none; /* Remove borders to look like a top bar */
-  }
-
-  .slay {
-    margin-left: 0; /* Adjust margin to match new layout */
-    margin-top: 20px; /* Adjust margin for spacing */
-  }
-
-  .slay img{
-    width: 100vw;
+    font-size: calc(5px + 1.5vw); /* Responsive font size that adjusts based on the viewport width, ensuring legibility on different devices. */
+    box-sizing: border-box; /* Ensures that padding and borders are included within the width and height of the list items. */
+    border: none; /* Removes any borders, giving the list items a cleaner, borderless appearance. */
   }
 
 
 
 
+
+
+  /*  spacing eachers from eahother so it's not clusterd */
   .wrappar .eacher{
 
     margin-top: 15%;
   }
+
+
+  /* align it in the middle and margin tops and bottoms sp there is space between the eacher and the edges of the screen*/
   .eacher, .ed .eacher{
     margin: 10% auto;
     align-content: center;
     margin: auto 8%;
 
   }
+  /* giving the headers of the eachers bigger fonts and a little bottom margin from their main content*/
   .eacher h3, .ed .eacher h4{
 
 
@@ -307,163 +263,117 @@ footer{
     margin-bottom: 5%;
   }
 
-
+  /* making sure image takes 100% of the width of the page, and making sure it has no float effect*/
   .eacher img {
     width: 100%;
     max-width: 100%;
     float: none;
     margin: 0; 
-    margin-bottom:3%;
+    margin-bottom:3%;  /* bottom margin to make sure it doesn't look clustered with the text*/
   }
+
 
   .eacher p {
-
-    font-size: calc(5px + 2vw);
-    align-content:center;
-
-
-
+    font-size: calc(5px + 2vw); /* This makes the font size responsive, scaling with the viewport width */
+    align-content: center; /* This property is usually used in flex containers, so it may not have the desired effect here for centering text. */
   }
 
-  .eacher h3{
-    margin-top: 15%;
-
+  .eacher h3 {
+    margin-top: 15%; /* Adds a large top margin, which could create excessive space depending on the viewport height. */
   }
 
-
-
-
-  .ed .eacher h3{
-
-    margin-top: 15%;
-  }
-  .ed p , .ed .eacher p{
-
-    margin: 0px 3vh;
-    font-size: calc(10px + 2vw);
-    align-content:center;
-
+  .ed .eacher h3 {
+    margin-top: 15%; /* Repetition of the previous style for '.ed' class, which may be redundant. */
   }
 
-
-
-
+  .ed p, .ed .eacher p {
+    margin: 0px 3vh; /* Adds vertical margin based on the viewport height, making margins scale based on screen size. */
+    font-size: calc(10px + 2vw); /* Responsive font size, similar to the earlier '.eacher p', but with a larger base size. */
+    align-content: center; /* Again, align-content is typically for flexbox containers, and may not center text properly. */
+  }
 
   footer {
-    text-align: center;
-    margin: 0;
-    padding: 20px 0;
-    width: 100%;
-    background-color: #4b4276;
-    color: white;
-    bottom:0;
-    position: relative;
+    text-align: center; /* Centers the text inside the footer. */
+    margin: 0; /* Removes default margins. */
+    padding: 20px 0; /* Adds padding on the top and bottom to space the footer content. */
+    width: 100%; /* Ensures the footer spans the full width of the viewport. */
+    background-color: #4b4276; /* Sets the background color of the footer to a dark purple (#4b4276). */
+    color: white; /* Makes the text color white for good contrast against the dark background. */
+    bottom: 0; /* Positions the footer at the bottom of the containing element. */
+    position: relative; /* The footer is positioned relative to its normal position, which might not stick it to the bottom of the page unless the page content is very short. */
   }
 
   #proj-footer {
-    text-align: center;
-    margin: 0;
-    padding: 20px 0;
-    width: 100%;
-    background-color: #4b4276;
-    color: white;
-    bottom:0;
-    position: fixed;
+    text-align: center; /* Centers the content within the footer horizontally. */
+    margin: 0; /* Removes any default margins from the footer. */
+    padding: 20px 0; /* Adds 20px padding at the top and bottom of the footer for vertical spacing. */
+    width: 100%; /* Ensures the footer spans the entire width of the viewport. */
+    background-color: #4b4276; /* Sets the background color of the footer to a dark purple (#4b4276). */
+    color: white; /* Makes the text color white for high contrast with the background. */
+    bottom: 0; /* Positions the footer at the bottom of the page. */
+    position: fixed; /* Fixes the footer at the bottom of the viewport so it stays visible as the user scrolls. */
   }
 
-
   footer a {
-    color: white;
-    text-decoration: none;
-
+    color: white; /* Changes the text color of links in the footer to white to match the footer text color. */
+    text-decoration: none; /* Removes the default underline from links. */
   }
 
   footer a:hover {
-    text-decoration: underline;
-
-
-
+    text-decoration: underline; /* Adds an underline to links when hovered over for a visual indicator of interaction. */
   }
 
-  #proj{
-
-    align-content:center;
-    margin-left:40%;
+  #proj {
+    align-content: center; /* This property is typically used for flex containers. If you're trying to center content, `text-align: center` may be more effective. */
+    margin-left: 40%; /* Moves the content 40% to the right of the parent container. This may cause an offset, so you may want to double-check this if the content isn't fully centered. */
   }
-  #proj h1{
-    margin-bottom:10%;
 
-
-
+  #proj h1 {
+    margin-bottom: 10%; /* Adds vertical space below the `h1` element, equal to 10% of the height of the containing element. This might create significant space below the heading, depending on the layout. */
   }
 
 
 
-  body{
 
+
+  .buttons {
+    text-align: center; /* Centers the content horizontally. */
+    margin-top: 10vh; /* Adds a vertical margin at the top based on viewport height. */
+    margin-right: 40%; /* Reduces the space on the right side, which may result in the buttons being offset to the left. */
+    margin-bottom: 15%; /* Adds bottom margin based on the viewport height, creating vertical spacing below the buttons. */
+    display: flex; /* Enables flexbox layout for the buttons inside this container. */
+    flex-direction: column; /* Arranges the buttons in a vertical column. */
   }
 
-  .buttons{
-    text-align: center;
-    margin-top: 10vh;
-    margin-right: 40%;
-    margin-bottom: 15%;
-    display: flex;
-    flex-direction: column;
-
-
+  button {
+    border: 1px solid purple; /* Adds a 1px solid purple border to all buttons. */
+    background: none; /* Removes default button background color. */
+    padding: 10px 20px; /* Adds padding inside the button for spacing between the text and the border. */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the buttons. */
+    margin: 2%; /* Adds margin around each button for spacing. */
   }
 
-  button{
-
-    border: 1px solid purple;
-    background:none;
-    padding:10px 20px;
-    cursor:pointer;
-    margin:2%;
-
+  #power, #add {
+    color: purple; /* Sets the text color of these specific buttons to purple. */
   }
 
-  #power, #add{
-
-
-    color:purple;
-
+  #clear, #sub {
+    color: black; /* Sets the text color of these specific buttons to black. */
   }
 
-
-  #clear, #sub{
-
-
-    color:black;
-
+  #power:hover, #add:hover {
+    color: black; /* Changes the text color to black when hovering over these buttons. */
   }
 
-
-  #power:hover, #add:hover{
-    color:black
-
-
-
+  #clear:hover, #sub:hover {
+    color: purple; /* Changes the text color to purple when hovering over these buttons. */
   }
 
-
-
-  #clear:hover, #sub:hover{
-    color:purple;
-
-
+  button::before {
+    content: ''; /* Inserts an empty pseudo-element before the button content. */
+    position: absolute; /* Absolutely positions the pseudo-element. */
+    left: 0; /* Positions the pseudo-element at the left edge of the button. */
   }
 
-
-  button::before{
-
-
-
-    content:'';
-
-    position:absolute;
-    left:0;
-  }
 
 }
