@@ -233,6 +233,8 @@ footer {
     font-size: calc(5px + 1.5vw); /* Responsive font size that adjusts based on the viewport width, ensuring legibility on different devices. */
     box-sizing: border-box; /* Ensures that padding and borders are included within the width and height of the list items. */
     border: none; /* Removes any borders, giving the list items a cleaner, borderless appearance. */
+
+    text-align: center;
   }
 
 
